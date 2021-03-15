@@ -18,18 +18,19 @@ public class SimpleArray<T> implements Iterable {
     }
 
     public void set(int index, T model) {
-        Objects.checkIndex(index, objects.length);
+        Objects.checkIndex(index, this.index);
         objects[index] = model;
     }
 
     public void remove(int index) {
-        Objects.checkIndex(index, objects.length);
-        System.arraycopy(objects, 0, objects, 0, index);
-        System.arraycopy(objects, index + 1, objects, index, objects.length - index - 1);
+        Objects.checkIndex(index, this.index);
+        objects[index] = null;
+        this.index--;
+        System.arraycopy(objects, index + 1, objects, index, this.index - index);
     }
 
     public Object get(int index) {
-        Objects.checkIndex(index, objects.length);
+        Objects.checkIndex(index, this.index);
         return objects[index];
     }
 
