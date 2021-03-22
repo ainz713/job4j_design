@@ -55,11 +55,8 @@ public class ListUtils {
         ListIterator<T> i1 = elements.listIterator();
         while (i.hasNext()) {
             T temp = i.next();
-            for (T e
-                    :elements) {
-                if (temp.equals(e)) {
-                    i.remove();
-                }
+            if (elements.contains(temp)) {
+                i.remove();
             }
         }
     }
