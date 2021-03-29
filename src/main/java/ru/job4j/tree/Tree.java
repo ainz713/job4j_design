@@ -34,7 +34,7 @@ class Tree<E> implements SimpleTree<E> {
     public boolean add(E parent, E child) {
         boolean rsl = false;
         Optional<Node<E>> el = findBy(parent);
-        if (el.isPresent() && findBy(child) != child) {
+        if (el.isPresent() && findBy(child).isEmpty()) {
             Node<E> parentNode = el.get();
             Node<E> childNode = new Node<>(child);
             parentNode.getChildren().add(childNode);
