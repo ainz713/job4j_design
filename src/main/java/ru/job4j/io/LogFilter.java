@@ -12,7 +12,6 @@ public class LogFilter {
             for (String line = in.readLine(); line != null; line = in.readLine()) {
                 if (line.substring(0, line.length() - 2).contains("404")) {
                     list.add(line);
-                    list.add("\n");
                 }
             }
         } catch (Exception e) {
@@ -23,6 +22,9 @@ public class LogFilter {
 
     public static void main(String[] args) {
         List<String> log = filter("log.txt");
-        System.out.println(log);
+        for (String e
+                :log) {
+            System.out.println(e + "\n");
+        }
     }
 }
