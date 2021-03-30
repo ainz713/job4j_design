@@ -24,7 +24,7 @@ public class LogFilter {
         List<String> log = filter("log.txt");
         for (String e
                 :log) {
-            System.out.println(e + "\n");
+            System.out.println(e + System.lineSeparator());
         }
     }
 }
