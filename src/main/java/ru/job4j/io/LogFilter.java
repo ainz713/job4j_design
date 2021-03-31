@@ -26,7 +26,7 @@ public class LogFilter {
                 ))) {
             for (String e
                     :log) {
-                out.write(e);
+                out.println(e);
             }
         } catch (Exception e) {
             e.printStackTrace();
