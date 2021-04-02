@@ -37,7 +37,7 @@ public class AnalizyTest {
                 list1.add(line);
             }
         }
-        assertThat(list1.get(0), is("10:57:01;10:58:01;"));
+        assertThat(list1.get(0), is("10:57:01;10:59:01;"));
         assertThat(list1.get(1), is("11:01:02;12:02:02;"));
     }
 
@@ -62,7 +62,7 @@ public class AnalizyTest {
                 list1.add(line);
             }
         }
-        assertThat(list1.get(0), is("10:57:01;10:58:01;"));
+        assertThat(list1.get(0), is("10:57:01;10:59:01;"));
         assertThat(list1.get(1), is("11:01:02;12:02:02;"));
     }
 }

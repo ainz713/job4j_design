@@ -15,7 +15,7 @@ public class Analizy {
                     nawli = true;
                     String[] s = line.split(" ");
                     list.add(s[1]);
-                } else if (nawli) {
+                } else if (nawli && (line.contains("200") || line.contains("300"))) {
                     String[] s = line.split(" ");
                     list.add(s[1]);
                     nawli = false;
@@ -29,7 +29,7 @@ public class Analizy {
                         new FileOutputStream(target)
                 ))) {
             for (int i = 0; i < list.size() - 1; i++) {
-                out.println(list.get(i) + ";" + list.get(i + 1) + ";");
+                out.println(String.format("%s;%s;", list.get(i), list.get(i + 1)));
                 i++;
             }
         } catch (Exception e) {
