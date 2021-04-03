@@ -23,10 +23,8 @@ public class DuplicatesVisitor extends SimpleFileVisitor<Path> {
             Path file, BasicFileAttributes attrs) throws IOException {
         FileProperty fileProperty = new FileProperty(
                 file.toFile().getTotalSpace(), file.toFile().getName());
-        if (data.contains(fileProperty)) {
+        if (!data.add(fileProperty)) {
             rsl.add(fileProperty);
-        } else {
-            data.add(fileProperty);
         }
         return super.visitFile(file, attrs);
     }
