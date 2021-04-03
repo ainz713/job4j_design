@@ -22,7 +22,7 @@ public class ArgsName {
                 String[] g = s.split("=");
                 for (String s1
                         : g) {
-                    if (s1.equals(" ")) {
+                    if (s1.isEmpty()) {
                       throw new IllegalArgumentException();
                     }
                 }
