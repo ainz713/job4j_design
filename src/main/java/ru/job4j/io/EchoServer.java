@@ -15,8 +15,13 @@ public class EchoServer {
                              new InputStreamReader(socket.getInputStream()))) {
                     String str;
                     while ((str = in.readLine()) != null && !str.isEmpty()) {
-                        if (str.contains("Bye")) {
+                        if (str.contains("Hello")) {
+                            System.out.println("Hello");
+                            break;
+                        }
+                        if (str.contains("Exit")) {
                             server.close();
+                            break;
                         }
                         System.out.println(str);
                     }
