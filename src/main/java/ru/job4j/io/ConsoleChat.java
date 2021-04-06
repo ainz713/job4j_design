@@ -18,6 +18,7 @@ public class ConsoleChat {
     public void run() {
         List<String> log = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        List<String> botanswrs = read(botAnswers);
         System.out.println("Введите фразу:");
         boolean stop = false;
         String text = scanner.nextLine();
@@ -33,7 +34,6 @@ public class ConsoleChat {
             if (Objects.equals(text, CONTINUE)) {
                 stop = false;
             }
-            List<String> botanswrs = read(botAnswers);
             Random random = new Random();
             if (!stop && !Objects.equals(text, "")) {
                 int index = random.nextInt(botanswrs.size());
