@@ -16,11 +16,19 @@ public class EchoServer {
                     String str;
                     while ((str = in.readLine()) != null && !str.isEmpty()) {
                         if (str.contains("Hello")) {
-                            System.out.println("Hello");
+                            out.write("HTTP/1.1 200 OK\r\n".getBytes());
+                            out.write("Hello\r\n".getBytes());
                             break;
                         }
                         if (str.contains("Exit")) {
+                            out.write("HTTP/1.1 200 OK\r\n".getBytes());
+                            out.write("Exit\r\n".getBytes());
                             server.close();
+                            break;
+                        }
+                        if (str.contains("What")) {
+                            out.write("HTTP/1.1 200 OK\r\n".getBytes());
+                            out.write("What\r\n".getBytes());
                             break;
                         }
                         System.out.println(str);
