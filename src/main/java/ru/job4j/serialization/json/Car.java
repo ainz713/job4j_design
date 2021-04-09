@@ -20,7 +20,27 @@ public class Car {
         this.seria = seria;
     }
 
-    @Override
+    public Model getModel() {
+        return model;
+    }
+
+    public String[] getSeria() {
+        return seria;
+    }
+
+    public boolean isPrivod() {
+        return privod;
+    }
+
+    public int getObemDvigatelya() {
+        return obemDvigatelya;
+    }
+
+    public String getMarka() {
+        return marka;
+    }
+
+       @Override
     public String toString() {
         return "Car{"
                 + "privod=" + privod

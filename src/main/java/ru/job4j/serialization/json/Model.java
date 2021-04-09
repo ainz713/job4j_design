@@ -13,4 +13,8 @@ public class Model {
                 + "number=" + number
                 + '}';
     }
+
+    public int getNumber() {
+        return number;
+    }
 }
