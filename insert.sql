@@ -1,0 +1,1 @@
+insert into auto(marka, model, price) values('BMW', '3', 35000);
