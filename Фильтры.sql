@@ -88,7 +88,7 @@ select * from product p
 where p.name like '%мороженое%';
 --все продукты, срок годности которых заканчивается в следующем месяце
 select * from product p
-where date_part('month', p.expired_date) = date_part('month', now()) + 1;
+where date_part('month', p.expired_date) = date_part('month', now() + interval '1 month');
 --запрос, который выводит самый дорогой продукт
 select * from product
 where price = (select max(price) from product);
