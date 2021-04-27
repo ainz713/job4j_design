@@ -24,24 +24,25 @@ select * from departments;
 select * from employees;
 
 --запросы с left, rigth, full, cross соединениями
-select * from employees e left join departments d 
-on e.departments_id = d.id;
-select * from employees e right join departments d 
-on e.departments_id = d.id;
-select * from employees e full join departments d 
-on e.departments_id = d.id;
-select * from employees e cross join departments d;
+select * from departments d left join employees e
+on d.id = e.departments_id;
+select * from departments d right join employees e
+on d.id = e.departments_id;
+select * from departments d full join employees e
+on d.id = e.departments_id;
+select * from departments d cross join employees e;
 
 --Используя left join найти департаменты, у которых нет работников
-select * from employees e left join departments d 
-on e.departments_id = d.id
-where d.id is null;
+select * from departments d left join employees e 
+on d.id = e.departments_id
+where e.departments_id is null;
 
 --Используя left и right join написать запросы, которые давали бы одинаковый результат 
 select * from employees e left join departments d 
 on e.departments_id = d.id;
 select * from departments e right join employees d 
 on d.departments_id = e.id;
+
 select * from departments e left join employees d 
 on d.departments_id = e.id;
 select * from employees e right join departments d 
