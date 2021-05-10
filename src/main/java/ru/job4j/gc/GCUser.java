@@ -13,7 +13,7 @@ public class GCUser {
         System.out.printf("size of user2 + user3 = %d\n", sizeOf(user2) + sizeOf(user3));
 
         GCDemo.info();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 2000; i++) {
             new User(i, "Name" + i);
         }
         GCDemo.info();
