@@ -1,0 +1,162 @@
+[0.009s][debug][gc,heap] Minimum heap 8388608  Initial heap 132120576  Maximum heap 2103443456
+[0.009s][info ][gc     ] Using Parallel
+[0.009s][debug][gc,heap,coops] Heap address: 0x0000000082a00000, size: 2006 MB, Compressed Oops mode: 32-bit
+[0.010s][info ][gc,init      ] Version: 15.0.1+9-18 (release)
+[0.010s][info ][gc,init      ] CPUs: 4 total, 4 available
+[0.010s][info ][gc,init      ] Memory: 8023M
+[0.010s][info ][gc,init      ] Large Page Support: Disabled
+[0.010s][info ][gc,init      ] NUMA Support: Disabled
+[0.010s][info ][gc,init      ] Compressed Oops: Enabled (32-bit)
+[0.010s][info ][gc,init      ] Heap Min Capacity: 8M
+[0.010s][info ][gc,init      ] Heap Initial Capacity: 126M
+[0.010s][info ][gc,init      ] Heap Max Capacity: 2006M
+[0.017s][info ][gc,init      ] Pre-touch: Disabled
+[0.017s][info ][gc,init      ] Parallel Workers: 4
+[0.018s][info ][gc,metaspace ] CDS archive(s) mapped at: [0x0000000800000000-0x0000000800b50000-0x0000000800b50000), size 11862016, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+[0.018s][info ][gc,metaspace ] Compressed class space mapped at: 0x0000000800b50000-0x0000000840b50000, size: 1073741824
+[0.018s][info ][gc,metaspace ] Narrow klass base: 0x0000000800000000, Narrow klass shift: 3, Narrow klass range: 0x100000000
+[0.178s][debug][gc,heap      ] GC(0) Heap before GC invocations=1 (full 0): PSYoungGen      total 37888K, used 4617K [0x00000000d6380000, 0x00000000d8d80000, 0x0000000100000000)
+[0.178s][debug][gc,heap      ] GC(0)   eden space 32768K, 14% used [0x00000000d6380000,0x00000000d68024f0,0x00000000d8380000)
+[0.178s][debug][gc,heap      ] GC(0)   from space 5120K, 0% used [0x00000000d8880000,0x00000000d8880000,0x00000000d8d80000)
+[0.178s][debug][gc,heap      ] GC(0)   to   space 5120K, 0% used [0x00000000d8380000,0x00000000d8380000,0x00000000d8880000)
+[0.178s][debug][gc,heap      ] GC(0)  ParOldGen       total 86016K, used 0K [0x0000000082a00000, 0x0000000087e00000, 0x00000000d6380000)
+[0.178s][debug][gc,heap      ] GC(0)   object space 86016K, 0% used [0x0000000082a00000,0x0000000082a00000,0x0000000087e00000)
+[0.178s][debug][gc,heap      ] GC(0)  Metaspace       used 1146K, capacity 4610K, committed 4864K, reserved 1056768K
+[0.178s][debug][gc,heap      ] GC(0)   class space    used 110K, capacity 400K, committed 512K, reserved 1048576K
+[0.178s][debug][gc,tlab      ] GC(0) TLAB totals: thrds: 3  refills: 7 max: 5 slow allocs: 0 max 0 waste: 36.8% gc: 1732512B max: 669752B slow: 6680B max: 6680B fast: 0B max: 0B
+[0.178s][info ][gc,start     ] GC(0) Pause Young (System.gc())
+[0.178s][debug][gc,phases,start] GC(0) Scavenge
+[0.180s][debug][gc,phases      ] GC(0) Scavenge 1.996ms
+[0.180s][debug][gc,phases,start] GC(0) Reference Processing
+[0.180s][debug][gc,ref         ] GC(0) Skipped phase 1 of Reference Processing: no references
+[0.180s][debug][gc,ref         ] GC(0) Skipped phase 3 of Reference Processing: no references
+[0.180s][debug][gc,phases,ref  ] GC(0) Reference Processing: 0.1ms
+[0.180s][debug][gc,phases,ref  ] GC(0)   Reconsider SoftReferences: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     SoftRef: skipped
+[0.180s][debug][gc,phases,ref  ] GC(0)   Notify Soft/WeakReferences: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     SoftRef: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     WeakRef: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     FinalRef: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     Total: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)   Notify and keep alive finalizable: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     FinalRef: skipped
+[0.180s][debug][gc,phases,ref  ] GC(0)   Notify PhantomReferences: 0.0ms
+[0.180s][debug][gc,phases,ref  ] GC(0)     PhantomRef: 0.0ms
+[0.181s][debug][gc,phases,ref  ] GC(0)   SoftReference:
+[0.181s][debug][gc,phases,ref  ] GC(0)     Discovered: 0
+[0.181s][debug][gc,phases,ref  ] GC(0)     Cleared: 0
+[0.181s][debug][gc,phases,ref  ] GC(0)   WeakReference:
+[0.181s][debug][gc,phases,ref  ] GC(0)     Discovered: 220
+[0.181s][debug][gc,phases,ref  ] GC(0)     Cleared: 164
+[0.181s][debug][gc,phases,ref  ] GC(0)   FinalReference:
+[0.181s][debug][gc,phases,ref  ] GC(0)     Discovered: 0
+[0.181s][debug][gc,phases,ref  ] GC(0)     Cleared: 0
+[0.181s][debug][gc,phases,ref  ] GC(0)   PhantomReference:
+[0.181s][debug][gc,phases,ref  ] GC(0)     Discovered: 87
+[0.181s][debug][gc,phases,ref  ] GC(0)     Cleared: 60
+[0.181s][debug][gc,phases      ] GC(0) Reference Processing 0.491ms
+[0.181s][debug][gc,phases,start] GC(0) Weak Processing
+[0.181s][debug][gc,phases      ] GC(0) Weak Processing 0.117ms
+[0.181s][debug][gc,ergo        ] GC(0) AdaptiveSizeStart:  collection: 1 
+[0.181s][debug][gc,age         ] GC(0) Desired survivor size 5242880 bytes, new threshold 7 (max threshold 15)
+[0.181s][debug][gc,ergo        ] GC(0) AdaptiveSizeStop: collection: 1 
+[0.181s][info ][gc,heap        ] GC(0) PSYoungGen: 4617K(37888K)->1589K(37888K) Eden: 4617K(32768K)->0K(32768K) From: 0K(5120K)->1589K(5120K)
+[0.181s][info ][gc,heap        ] GC(0) ParOldGen: 0K(86016K)->27K(86016K)
+[0.181s][info ][gc,metaspace   ] GC(0) Metaspace: 1146K(4864K)->1146K(4864K) NonClass: 1035K(4352K)->1035K(4352K) Class: 110K(512K)->110K(512K)
+[0.181s][info ][gc             ] GC(0) Pause Young (System.gc()) 4M->1M(121M) 2.866ms
+[0.181s][info ][gc,cpu         ] GC(0) User=0.00s Sys=0.00s Real=0.00s
+[0.181s][debug][gc,heap        ] GC(0) Heap after GC invocations=1 (full 0): PSYoungGen      total 37888K, used 1589K [0x00000000d6380000, 0x00000000d8d80000, 0x0000000100000000)
+[0.181s][debug][gc,heap        ] GC(0)   eden space 32768K, 0% used [0x00000000d6380000,0x00000000d6380000,0x00000000d8380000)
+[0.181s][debug][gc,heap        ] GC(0)   from space 5120K, 31% used [0x00000000d8380000,0x00000000d850d4e0,0x00000000d8880000)
+[0.181s][debug][gc,heap        ] GC(0)   to   space 5120K, 0% used [0x00000000d8880000,0x00000000d8880000,0x00000000d8d80000)
+[0.181s][debug][gc,heap        ] GC(0)  ParOldGen       total 86016K, used 27K [0x0000000082a00000, 0x0000000087e00000, 0x00000000d6380000)
+[0.181s][debug][gc,heap        ] GC(0)   object space 86016K, 0% used [0x0000000082a00000,0x0000000082a06dd0,0x0000000087e00000)
+[0.181s][debug][gc,heap        ] GC(0)  Metaspace       used 1146K, capacity 4610K, committed 4864K, reserved 1056768K
+[0.181s][debug][gc,heap        ] GC(0)   class space    used 110K, capacity 400K, committed 512K, reserved 1048576K
+[0.181s][debug][gc,task,time   ] GC(0) VM-Thread 1779690 1802315 1811813
+[0.181s][debug][gc,phases,start] GC(1) Pre Compact
+[0.181s][debug][gc,heap        ] GC(1) Heap before GC invocations=2 (full 1): PSYoungGen      total 37888K, used 1589K [0x00000000d6380000, 0x00000000d8d80000, 0x0000000100000000)
+[0.181s][debug][gc,heap        ] GC(1)   eden space 32768K, 0% used [0x00000000d6380000,0x00000000d6380000,0x00000000d8380000)
+[0.181s][debug][gc,heap        ] GC(1)   from space 5120K, 31% used [0x00000000d8380000,0x00000000d850d4e0,0x00000000d8880000)
+[0.181s][debug][gc,heap        ] GC(1)   to   space 5120K, 0% used [0x00000000d8880000,0x00000000d8880000,0x00000000d8d80000)
+[0.181s][debug][gc,heap        ] GC(1)  ParOldGen       total 86016K, used 27K [0x0000000082a00000, 0x0000000087e00000, 0x00000000d6380000)
+[0.181s][debug][gc,heap        ] GC(1)   object space 86016K, 0% used [0x0000000082a00000,0x0000000082a06dd0,0x0000000087e00000)
+[0.181s][debug][gc,heap        ] GC(1)  Metaspace       used 1146K, capacity 4610K, committed 4864K, reserved 1056768K
+[0.181s][debug][gc,heap        ] GC(1)   class space    used 110K, capacity 400K, committed 512K, reserved 1048576K
+[0.181s][debug][gc,phases      ] GC(1) Pre Compact 0.159ms
+[0.181s][info ][gc,start       ] GC(1) Pause Full (System.gc())
+[0.181s][info ][gc,phases,start] GC(1) Marking Phase
+[0.181s][debug][gc,phases,start] GC(1) Par Mark
+[0.183s][debug][gc,phases      ] GC(1) Par Mark 1.394ms
+[0.183s][debug][gc,phases,start] GC(1) Reference Processing
+[0.183s][debug][gc,ref         ] GC(1) Skipped phase 1 of Reference Processing: no references
+[0.183s][debug][gc,ref         ] GC(1) Skipped phase 3 of Reference Processing: no references
+[0.183s][debug][gc,phases,ref  ] GC(1) Reference Processing: 0.1ms
+[0.183s][debug][gc,phases,ref  ] GC(1)   Reconsider SoftReferences: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     SoftRef: skipped
+[0.183s][debug][gc,phases,ref  ] GC(1)   Notify Soft/WeakReferences: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     SoftRef: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     WeakRef: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     FinalRef: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     Total: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)   Notify and keep alive finalizable: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     FinalRef: skipped
+[0.183s][debug][gc,phases,ref  ] GC(1)   Notify PhantomReferences: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)     PhantomRef: 0.0ms
+[0.183s][debug][gc,phases,ref  ] GC(1)   SoftReference:
+[0.183s][debug][gc,phases,ref  ] GC(1)     Discovered: 0
+[0.183s][debug][gc,phases,ref  ] GC(1)     Cleared: 0
+[0.183s][debug][gc,phases,ref  ] GC(1)   WeakReference:
+[0.183s][debug][gc,phases,ref  ] GC(1)     Discovered: 75
+[0.183s][debug][gc,phases,ref  ] GC(1)     Cleared: 75
+[0.183s][debug][gc,phases,ref  ] GC(1)   FinalReference:
+[0.183s][debug][gc,phases,ref  ] GC(1)     Discovered: 0
+[0.183s][debug][gc,phases,ref  ] GC(1)     Cleared: 0
+[0.183s][debug][gc,phases,ref  ] GC(1)   PhantomReference:
+[0.183s][debug][gc,phases,ref  ] GC(1)     Discovered: 60
+[0.183s][debug][gc,phases,ref  ] GC(1)     Cleared: 60
+[0.183s][debug][gc,phases      ] GC(1) Reference Processing 0.311ms
+[0.183s][debug][gc,phases,start] GC(1) Weak Processing
+[0.183s][debug][gc,phases      ] GC(1) Weak Processing 0.044ms
+[0.183s][debug][gc,phases,start] GC(1) Class Unloading
+[0.183s][debug][gc,phases,start] GC(1) ClassLoaderData
+[0.183s][debug][gc,phases      ] GC(1) ClassLoaderData 0.011ms
+[0.183s][debug][gc,phases,start] GC(1) Trigger cleanups
+[0.183s][debug][gc,phases      ] GC(1) Trigger cleanups 0.011ms
+[0.184s][debug][gc,phases      ] GC(1) Class Unloading 0.304ms
+[0.184s][info ][gc,phases      ] GC(1) Marking Phase 2.149ms
+[0.184s][info ][gc,phases,start] GC(1) Summary Phase
+[0.184s][info ][gc,phases      ] GC(1) Summary Phase 0.022ms
+[0.184s][info ][gc,phases,start] GC(1) Adjust Roots
+[0.185s][info ][gc,phases      ] GC(1) Adjust Roots 0.896ms
+[0.185s][info ][gc,phases,start] GC(1) Compaction Phase
+[0.187s][info ][gc,phases      ] GC(1) Compaction Phase 2.919ms
+[0.187s][info ][gc,phases,start] GC(1) Post Compact
+[0.188s][info ][gc,phases      ] GC(1) Post Compact 0.049ms
+[0.188s][debug][gc,ergo        ] GC(1) AdaptiveSizeStart: collection: 2 
+[0.188s][debug][gc,ergo        ] GC(1) AdaptiveSizeStop: collection: 2 
+[0.188s][info ][gc,heap        ] GC(1) PSYoungGen: 1589K(37888K)->0K(37888K) Eden: 0K(32768K)->0K(32768K) From: 1589K(5120K)->0K(5120K)
+[0.188s][info ][gc,heap        ] GC(1) ParOldGen: 27K(86016K)->1547K(86016K)
+[0.188s][info ][gc,metaspace   ] GC(1) Metaspace: 1146K(4864K)->1146K(4864K) NonClass: 1035K(4352K)->1035K(4352K) Class: 110K(512K)->110K(512K)
+[0.188s][info ][gc             ] GC(1) Pause Full (System.gc()) 1M->1M(121M) 6.255ms
+[0.188s][info ][gc,cpu         ] GC(1) User=0.00s Sys=0.00s Real=0.01s
+[0.188s][debug][gc,heap        ] GC(1) Heap after GC invocations=2 (full 1): PSYoungGen      total 37888K, used 0K [0x00000000d6380000, 0x00000000d8d80000, 0x0000000100000000)
+[0.188s][debug][gc,heap        ] GC(1)   eden space 32768K, 0% used [0x00000000d6380000,0x00000000d6380000,0x00000000d8380000)
+[0.188s][debug][gc,heap        ] GC(1)   from space 5120K, 0% used [0x00000000d8380000,0x00000000d8380000,0x00000000d8880000)
+[0.188s][debug][gc,heap        ] GC(1)   to   space 5120K, 0% used [0x00000000d8880000,0x00000000d8880000,0x00000000d8d80000)
+[0.188s][debug][gc,heap        ] GC(1)  ParOldGen       total 86016K, used 1547K [0x0000000082a00000, 0x0000000087e00000, 0x00000000d6380000)
+[0.188s][debug][gc,heap        ] GC(1)   object space 86016K, 1% used [0x0000000082a00000,0x0000000082b82c78,0x0000000087e00000)
+[0.188s][debug][gc,heap        ] GC(1)  Metaspace       used 1146K, capacity 4610K, committed 4864K, reserved 1056768K
+[0.188s][debug][gc,heap        ] GC(1)   class space    used 110K, capacity 400K, committed 512K, reserved 1048576K
+[0.188s][debug][gc,task,time   ] GC(1) VM-Thread 1813995 1845292 1876715
+[0.189s][info ][gc,heap,exit   ] Heap
+[0.189s][info ][gc,heap,exit   ]  PSYoungGen      total 37888K, used 983K [0x00000000d6380000, 0x00000000d8d80000, 0x0000000100000000)
+[0.189s][info ][gc,heap,exit   ]   eden space 32768K, 3% used [0x00000000d6380000,0x00000000d6475dd0,0x00000000d8380000)
+[0.189s][info ][gc,heap,exit   ]   from space 5120K, 0% used [0x00000000d8380000,0x00000000d8380000,0x00000000d8880000)
+[0.189s][info ][gc,heap,exit   ]   to   space 5120K, 0% used [0x00000000d8880000,0x00000000d8880000,0x00000000d8d80000)
+[0.189s][info ][gc,heap,exit   ]  ParOldGen       total 86016K, used 1547K [0x0000000082a00000, 0x0000000087e00000, 0x00000000d6380000)
+[0.189s][info ][gc,heap,exit   ]   object space 86016K, 1% used [0x0000000082a00000,0x0000000082b82c78,0x0000000087e00000)
+[0.189s][info ][gc,heap,exit   ]  Metaspace       used 1149K, capacity 4610K, committed 4864K, reserved 1056768K
+[0.189s][info ][gc,heap,exit   ]   class space    used 110K, capacity 400K, committed 512K, reserved 1048576K
+[0.189s][debug][gc,heap,exit   ] Accumulated young generation GC time 0.0027966 secs
+[0.189s][debug][gc,heap,exit   ] Accumulated old generation GC time 0.0061837 secs
