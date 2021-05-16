@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.ref.SoftReference;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,26 +17,14 @@ public class Cache {
         this.cache = new HashMap<>();
     }
 
-    private String readFile(String fileName) throws IOException {
-        String rsl = "";
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            StringBuilder sp = new StringBuilder();
-            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
-                    sp.append(line).append(System.lineSeparator());
-            }
-            rsl = sp.toString();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return rsl;
-    }
-
     public String get(String key) throws IOException {
-        String rsl;
+        String rsl = "";
         if (cache.containsKey(key)) {
             rsl = cache.get(key).get();
-        } else {
-            rsl = readFile(key);
+        }
+
+        if (rsl == null || rsl.isEmpty() || !cache.containsKey(key)) {
+            rsl = Files.readString(Path.of(key));
             cache.put(key, new SoftReference<>(rsl));
         }
         return rsl;
