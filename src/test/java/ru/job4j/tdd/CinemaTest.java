@@ -5,11 +5,9 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 import org.junit.Test;
+import ru.job4j.iterator.ListUtils;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class CinemaTest {
 
@@ -39,7 +37,7 @@ public class CinemaTest {
         assertThat(sessions, is(Collections.emptyList()));
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void whenNotBuy() {
         Account account = new AccountCinema();
         Cinema cinema = new Cinema3D();
@@ -47,6 +45,5 @@ public class CinemaTest {
         date.set(2021, 03, 20, 21, 00);
         Ticket ticket1 = cinema.buy(account, 1, 1, date);
         Ticket ticket2 = cinema.buy(account, 1, 1, date);
-        assertNull(ticket2);
     }
 }
