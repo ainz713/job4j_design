@@ -13,6 +13,7 @@ public class ReportXml implements Report {
     @Override
     public String generate(Predicate<Employee> filter) {
         StringBuilder text = new StringBuilder();
+        text.append("<?xml version=\"1.1\" encoding=\"UTF-8\" ?>\n");
         text.append("<Employees>");
         for (Employee employee : store.findBy(filter)) {
             text.append("<Employee>")

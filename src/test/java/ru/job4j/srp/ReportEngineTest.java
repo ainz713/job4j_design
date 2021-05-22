@@ -33,6 +33,7 @@ public class ReportEngineTest {
         store.add(worker);
         Report engine = new ReportXml(store);
         StringBuilder expect = new StringBuilder()
+                .append("<?xml version=\"1.1\" encoding=\"UTF-8\" ?>\n")
                 .append("<Employees>")
                 .append("<Employee>")
                 .append("<Name>").append(worker.getName())
@@ -56,14 +57,14 @@ public class ReportEngineTest {
         store.add(worker);
         Report engine = new ReportJson(store);
         StringBuilder expect = new StringBuilder()
-                .append("{\n")
+                .append("[\n")
                 .append("\"employee\":{\n")
                 .append("\"name\":\"").append(worker.getName())
                 .append("\",\n\"hired\":\"").append(worker.getHired())
                 .append("\",\n\"fired\":\"").append(worker.getFired())
                 .append("\",\n\"salary\":\"").append(worker.getSalary())
                 .append("\"\n}")
-                .append("\n}");
+                .append("\n]");
         assertThat(engine.generate(em -> true), is(expect.toString()));
     }
 }
