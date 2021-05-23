@@ -1,0 +1,15 @@
+[0.013s][debug][gc,heap] Minimum heap 8388608  Initial heap 132120576  Maximum heap 2103443456
+[0.015s][debug][gc     ] ConcGCThreads: 0
+[0.015s][debug][gc     ] ParallelGCThreads: 4
+[0.015s][info ][gc     ] Using Concurrent Mark Sweep
+[0.015s][info ][gc,heap,coops] Heap address: 0x0000000082a00000, size: 2006 MB, Compressed Oops mode: 32-bit
+[0.279s][info ][gc,heap,exit ] Heap
+[0.279s][info ][gc,heap,exit ]  par new generation   total 38720K, used 4821K [0x0000000082a00000, 0x0000000085400000, 0x00000000976c0000)
+[0.279s][info ][gc,heap,exit ]   eden space 34432K,  14% used [0x0000000082a00000, 0x0000000082eb5418, 0x0000000084ba0000)
+[0.279s][info ][gc,heap,exit ]   from space 4288K,   0% used [0x0000000084ba0000, 0x0000000084ba0000, 0x0000000084fd0000)
+[0.286s][info ][gc,heap,exit ]   to   space 4288K,   0% used [0x0000000084fd0000, 0x0000000084fd0000, 0x0000000085400000)
+[0.286s][info ][gc,heap,exit ]  concurrent mark-sweep generation total 86016K, used 0K [0x00000000976c0000, 0x000000009cac0000, 0x0000000100000000)
+[0.286s][info ][gc,heap,exit ]  Metaspace       used 7186K, capacity 7256K, committed 7424K, reserved 1056768K
+[0.286s][info ][gc,heap,exit ]   class space    used 642K, capacity 669K, committed 768K, reserved 1048576K
+[0.286s][debug][gc,heap,exit ] Accumulated young generation GC time 0.0000000 secs, 0 GC's, avg GC time 0.0000000
+[0.286s][debug][gc,heap,exit ] Accumulated old generation GC time 0.0000000 secs, 0 GC's, avg GC time 0.0000000
