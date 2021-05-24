@@ -16,6 +16,15 @@ public class Trash implements Strategy {
         return trash.add(food);
     }
 
+    @Override
+    public boolean accept(Food food) {
+            int num = food.executeDate(food);
+            if (num >= 100) {
+                return true;
+            }
+            return false;
+        }
+
     public static List<Food> getTrash() {
         return trash;
     }

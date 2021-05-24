@@ -1,6 +1,7 @@
 package ru.job4j.lsp;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Food {
 
@@ -38,4 +39,9 @@ public class Food {
         return expiryDate;
     }
 
+    public int executeDate(Food food) {
+        long wholeExp = ChronoUnit.DAYS.between(food.getCreateDate(), food.getExpiryDate());
+        long currentExp = ChronoUnit.DAYS.between(food.getCreateDate(), LocalDate.now());
+        return (int) (currentExp * 100L / wholeExp);
+    }
 }

@@ -19,4 +19,14 @@ public class Shop implements Strategy {
     public boolean add(Food food) {
         return shop.add(food);
     }
+
+    @Override
+    public boolean accept(Food food) {
+        int num = food.executeDate(food);
+        if (num >= 25 && num < 100) {
+            food.setDiscount(0.2);
+            return true;
+        }
+        return false;
+    }
 }
