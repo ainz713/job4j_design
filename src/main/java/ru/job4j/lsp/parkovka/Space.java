@@ -7,18 +7,18 @@ public class Space implements ParkingSpace {
 
     private final List<Vehicle> vehicles;
 
-    public Space(List<Vehicle> vehicles) {
+    public Space() {
         this.vehicles = new ArrayList<>();
     }
 
     @Override
-    public void add(Vehicle vehicle) {
-        vehicles.add(vehicle);
+    public boolean add(Vehicle vehicle) {
+        return vehicles.add(vehicle);
     }
 
     @Override
-    public void remove(Vehicle vehicle) {
-        vehicles.remove(vehicle);
+    public boolean remove(Vehicle vehicle) {
+       return vehicles.remove(vehicle);
     }
 
     @Override

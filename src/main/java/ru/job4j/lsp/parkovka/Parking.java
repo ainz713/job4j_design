@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface Parking {
 
-    void parking();
+    boolean parking(Vehicle vehicle);
 
-    void removeFromParking();
+    boolean removeFromParking(Vehicle vehicle);
 
     List<Vehicle> getVehicles();
 }

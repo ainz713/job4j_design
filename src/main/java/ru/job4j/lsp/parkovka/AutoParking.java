@@ -14,13 +14,13 @@ public class AutoParking implements Parking {
     }
 
     @Override
-    public void parking() {
-
+    public boolean parking(Vehicle vehicle) {
+        return false;
     }
 
     @Override
-    public void removeFromParking() {
-
+    public boolean removeFromParking(Vehicle vehicle) {
+        return false;
     }
 
     @Override
