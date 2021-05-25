@@ -13,7 +13,6 @@ public class AutoParking implements ParkingSpace {
         this.capacity = capacity;
     }
 
-
     @Override
     public boolean add(Vehicle vehicle) {
         return false;
