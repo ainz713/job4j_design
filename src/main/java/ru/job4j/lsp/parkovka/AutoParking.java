@@ -2,29 +2,35 @@ package ru.job4j.lsp.parkovka;
 
 import java.util.List;
 
-public class AutoParking implements Parking {
+public class AutoParking implements ParkingSpace {
 
-    private ParkingSpace parkingSpace;
+    private Parkovka parkovka;
     private int capacity;
     private int count;
 
-    public AutoParking(ParkingSpace parkingSpace, int capacity) {
-        this.parkingSpace = parkingSpace;
+    public AutoParking(Parkovka parkovka, int capacity) {
+        this.parkovka = parkovka;
         this.capacity = capacity;
     }
 
+
     @Override
-    public boolean parking(Vehicle vehicle) {
+    public boolean add(Vehicle vehicle) {
         return false;
     }
 
     @Override
-    public boolean removeFromParking(Vehicle vehicle) {
+    public boolean remove(Vehicle vehicle) {
         return false;
     }
 
     @Override
-    public List<Vehicle> getVehicles() {
-        return parkingSpace.findAll();
+    public boolean contains(Vehicle vehicle) {
+        return false;
+    }
+
+    @Override
+    public List<Vehicle> findAll() {
+        return null;
     }
 }
