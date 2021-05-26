@@ -15,9 +15,9 @@ public class ParkingTest {
 
     @Before
     public void init() {
-        parkovka = new Parkovka();
-        autoParking = new AutoParking(parkovka, 10);
-        truckParking = new TruckParking(parkovka, 4);
+        autoParking = new AutoParking();
+        truckParking = new TruckParking();
+        parkovka = new Parkovka(autoParking, 10, truckParking, 4);
     }
 
     @Ignore
@@ -38,7 +38,7 @@ public class ParkingTest {
     @Ignore
     @Test
     public void whenCarPlaceIsFull() {
-        autoParking = new AutoParking(parkovka, 1);
+        parkovka = new Parkovka(autoParking, 1, truckParking, 4);
         Auto auto1 = new Auto("Car1");
         assertTrue(parkovka.parking(auto1));
         Auto auto2 = new Auto("Car2");

@@ -1,16 +1,14 @@
 package ru.job4j.lsp.parkovka;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AutoParking implements ParkingSpace {
 
-    private Parkovka parkovka;
-    private int capacity;
-    private int count;
+    private final List<Vehicle> vehicles;
 
-    public AutoParking(Parkovka parkovka, int capacity) {
-        this.parkovka = parkovka;
-        this.capacity = capacity;
+    public AutoParking() {
+        this.vehicles = new ArrayList<>();
     }
 
     @Override

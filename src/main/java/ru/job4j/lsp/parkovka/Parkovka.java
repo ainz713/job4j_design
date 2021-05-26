@@ -5,7 +5,19 @@ import java.util.List;
 
 public class Parkovka implements Parking {
 
-    private final List<Vehicle> vehicles;
+    private List<Vehicle> vehicles;
+    private AutoParking autoParking;
+    private TruckParking truckParking;
+    private int acapacity;
+    private int tcapacity;
+
+    public Parkovka(AutoParking autoParking, int acapacity,
+                    TruckParking truckParking, int tcapacity) {
+        this.autoParking = autoParking;
+        this.acapacity = acapacity;
+        this.truckParking = truckParking;
+        this.tcapacity = tcapacity;
+    }
 
     public Parkovka() {
         this.vehicles = new ArrayList<>();
