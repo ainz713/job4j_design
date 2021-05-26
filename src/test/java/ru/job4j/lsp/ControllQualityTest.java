@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class ControllQualityTest  {
-    private List<Strategy> st;
+    private List<Storage> st;
     private ControllQuality cq;
 
     @Before

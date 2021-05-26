@@ -3,7 +3,7 @@ package ru.job4j.lsp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Trash implements Strategy {
+public class Trash implements Storage {
 
     private static List<Food> trash;
 
