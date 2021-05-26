@@ -18,6 +18,7 @@ public class ControllQuality {
                 :storages) {
             if (e.accept(food)) {
                 e.add(food);
+                break;
             }
         }
     }
