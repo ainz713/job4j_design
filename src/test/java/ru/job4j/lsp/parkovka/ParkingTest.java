@@ -10,14 +10,10 @@ import static org.junit.Assert.*;
 public class ParkingTest {
 
     private Parkovka parkovka;
-    private AutoParking autoParking;
-    private TruckParking truckParking;
 
     @Before
     public void init() {
-        autoParking = new AutoParking();
-        truckParking = new TruckParking();
-        parkovka = new Parkovka(autoParking, 10, truckParking, 4);
+        parkovka = new Parkovka(10, 4);
     }
 
     @Ignore
@@ -26,19 +22,19 @@ public class ParkingTest {
         Auto auto1 = new Auto("Car1");
         Auto auto2 = new Auto("Car2");
         assertTrue(parkovka.parking(auto1));
-        assertTrue(autoParking.contains(auto1));
+        assertTrue(parkovka.getAutoParking().contains(auto1));
         assertTrue(parkovka.parking(auto2));
-        assertTrue(autoParking.contains(auto2));
+        assertTrue(parkovka.getAutoParking().contains(auto2));
         assertThat(parkovka.getVehicles().size(), is(2));
         parkovka.removeFromParking(auto2);
-        assertFalse(autoParking.contains(auto2));
+        assertFalse(parkovka.getAutoParking().contains(auto2));
         assertThat(parkovka.getVehicles().size(), is(1));
     }
 
     @Ignore
     @Test
     public void whenCarPlaceIsFull() {
-        parkovka = new Parkovka(autoParking, 1, truckParking, 4);
+        parkovka = new Parkovka(1, 4);
         Auto auto1 = new Auto("Car1");
         assertTrue(parkovka.parking(auto1));
         Auto auto2 = new Auto("Car2");
@@ -51,14 +47,14 @@ public class ParkingTest {
         Truck truck1 = new Truck("Truck1", 2);
         Truck truck2 = new Truck("Truck2", 2);
         assertTrue(parkovka.parking(truck1));
-        assertTrue(truckParking.contains(truck1));
+        assertTrue(parkovka.getTruckParking().contains(truck1));
         assertTrue(parkovka.parking(truck2));
-        assertTrue(truckParking.contains(truck2));
+        assertTrue(parkovka.getTruckParking().contains(truck2));
         assertThat(parkovka.getVehicles().size(), is(4));
         Truck truck3 = new Truck("Truck3", 2);
         assertFalse(parkovka.parking(truck3));
         parkovka.removeFromParking(truck1);
-        assertFalse(truckParking.contains(truck1));
+        assertFalse(parkovka.getTruckParking().contains(truck1));
         assertTrue(parkovka.parking(truck3));
     }
 
@@ -67,7 +63,7 @@ public class ParkingTest {
     public void whenTruckParkingCarPlace() {
         Truck truck = new Truck("Truck", 2);
         assertTrue(parkovka.parking(truck));
-        assertTrue(autoParking.contains(truck));
+        assertTrue(parkovka.getAutoParking().contains(truck));
     }
 
     @Ignore
@@ -75,6 +71,6 @@ public class ParkingTest {
     public void whenAutoNotParkingTruckPlace() {
         Auto auto1 = new Auto("Car1");
         assertTrue(parkovka.parking(auto1));
-        assertFalse(truckParking.contains(auto1));
+        assertFalse(parkovka.getTruckParking().contains(auto1));
     }
 }

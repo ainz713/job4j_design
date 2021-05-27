@@ -6,8 +6,10 @@ import java.util.List;
 public class AutoParking implements ParkingSpace {
 
     private final List<Vehicle> vehicles;
+    private int capacity;
 
-    public AutoParking() {
+    public AutoParking(int capacity) {
+        this.capacity = capacity;
         this.vehicles = new ArrayList<>();
     }
 

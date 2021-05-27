@@ -7,20 +7,28 @@ public class Parkovka implements Parking {
 
     private List<Vehicle> vehicles;
     private AutoParking autoParking;
+
     private TruckParking truckParking;
     private int acapacity;
     private int tcapacity;
 
-    public Parkovka(AutoParking autoParking, int acapacity,
-                    TruckParking truckParking, int tcapacity) {
-        this.autoParking = autoParking;
+    public Parkovka(int acapacity, int tcapacity) {
+        this.autoParking = new AutoParking(acapacity);
         this.acapacity = acapacity;
-        this.truckParking = truckParking;
+        this.truckParking = new TruckParking(tcapacity);
         this.tcapacity = tcapacity;
     }
 
     public Parkovka() {
         this.vehicles = new ArrayList<>();
+    }
+
+    public AutoParking getAutoParking() {
+        return autoParking;
+    }
+
+    public TruckParking getTruckParking() {
+        return truckParking;
     }
 
     @Override
