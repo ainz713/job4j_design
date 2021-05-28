@@ -40,7 +40,7 @@ public class ParkingTest {
 
     @Test
     public void whenTruckParkingFullAndLeaving() {
-        parkovka = new Parkovka(10, 2);
+        parkovka = new Parkovka(0, 2);
         Truck truck1 = new Truck("Truck1", 2);
         Truck truck2 = new Truck("Truck2", 2);
         assertTrue(parkovka.parking(truck1));

@@ -31,7 +31,7 @@ public class Parkovka implements Parking {
     @Override
     public boolean parking(Vehicle vehicle) {
         vehicles.add(vehicle);
-        if (vehicle.getSize() > 1 && truckParking.add(vehicle)) {
+        if (vehicle.getSize() > 1 && (tcapacity >= truckParking.findAll().size() + 1)) {
             return truckParking.add(vehicle);
         }
         return autoParking.add(vehicle);
