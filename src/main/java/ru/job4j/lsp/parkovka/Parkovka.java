@@ -17,9 +17,6 @@ public class Parkovka implements Parking {
         this.acapacity = acapacity;
         this.truckParking = new TruckParking(tcapacity);
         this.tcapacity = tcapacity;
-    }
-
-    public Parkovka() {
         this.vehicles = new ArrayList<>();
     }
 
@@ -33,16 +30,24 @@ public class Parkovka implements Parking {
 
     @Override
     public boolean parking(Vehicle vehicle) {
-        return false;
+        vehicles.add(vehicle);
+        if (vehicle.getSize() > 1 && truckParking.add(vehicle)) {
+            return truckParking.add(vehicle);
+        }
+        return autoParking.add(vehicle);
     }
 
     @Override
     public boolean removeFromParking(Vehicle vehicle) {
-        return false;
+        vehicles.remove(vehicle);
+        if (vehicle.getSize() > 1) {
+            return truckParking.remove(vehicle);
+        }
+        return autoParking.remove(vehicle);
     }
 
     @Override
     public List<Vehicle> getVehicles() {
-        return null;
+        return vehicles;
     }
 }

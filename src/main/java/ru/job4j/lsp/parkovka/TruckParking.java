@@ -15,21 +15,24 @@ public class TruckParking implements ParkingSpace {
 
     @Override
     public boolean add(Vehicle vehicle) {
+        if (capacity >= vehicles.size() + 1) {
+            return vehicles.add(vehicle);
+        }
         return false;
     }
 
     @Override
     public boolean remove(Vehicle vehicle) {
-        return false;
+        return vehicles.remove(vehicle);
     }
 
     @Override
     public boolean contains(Vehicle vehicle) {
-        return false;
+        return vehicles.contains(vehicle);
     }
 
     @Override
     public List<Vehicle> findAll() {
-        return null;
+        return vehicles;
     }
 }
