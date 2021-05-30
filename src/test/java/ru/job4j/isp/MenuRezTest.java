@@ -1,7 +1,7 @@
 package ru.job4j.isp;
 
-
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -16,6 +16,7 @@ public class MenuRezTest {
         menu = new MenuRez(new Node("Задача 0", new SimpleAction()));
     }
 
+    @Ignore
     @Test
     public void whenPrintMenu() {
         menu.add("Задача 0", "Задача 1.", new SimpleAction());
