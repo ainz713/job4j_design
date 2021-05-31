@@ -21,6 +21,16 @@ public class Shop implements Storage {
     }
 
     @Override
+    public List<Food> get() {
+        return shop;
+    }
+
+    @Override
+    public boolean remove() {
+        return shop.removeAll(shop);
+    }
+
+    @Override
     public boolean accept(Food food) {
         int num = food.executeDate(food);
         if (num >= 25 && num < 100) {

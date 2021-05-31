@@ -49,4 +49,17 @@ public class ControllQualityTest  {
         cq.whatStorage(st, fish);
         assertThat(Warehouse.getWarehouse().get(0), is(fish));
     }
+
+    @Test
+    public void controllResort() {
+        LocalDate expiryDate = LocalDate.parse("2021-07-30");
+        LocalDate createDate = LocalDate.parse("2021-05-22");
+        Fish fish = new Fish("палтус", expiryDate, createDate, 100, 0);
+        cq.whatStorage(st, fish);
+        assertThat(Warehouse.getWarehouse().get(0), is(fish));
+        fish.setCreateDate(LocalDate.parse("2021-03-16"));
+        fish.setExpiryDate(LocalDate.parse("2021-03-21"));
+        cq.resort(st);
+        assertThat(Trash.getTrash().get(0), is(fish));
+    }
 }

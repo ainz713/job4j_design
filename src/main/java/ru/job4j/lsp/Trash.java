@@ -17,6 +17,16 @@ public class Trash implements Storage {
     }
 
     @Override
+    public List<Food> get() {
+        return trash;
+    }
+
+    @Override
+    public boolean remove() {
+        return trash.removeAll(trash);
+    }
+
+    @Override
     public boolean accept(Food food) {
             int num = food.executeDate(food);
             if (num >= 100) {
