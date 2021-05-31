@@ -1,28 +1,23 @@
 package ru.job4j;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 public class Pochta {
 
     public List<Userp> obrabotka(List<Userp> users) {
-        for (int i = 0; i < users.size(); i++) {
-            Set<String> rsl = users.get(i).getAddress();
-            for (int j = 0; j < users.size() - 1; j++) {
-                if (users.get(i).equals(users.get(j + 1))) {
-                    continue;
-                }
-                for (String s
-                        : users.get(j + 1).getAddress()) {
-                    if (rsl.contains(s)) {
-                        sliyanie(users.get(i), users.get(j + 1));
-                        if (users.get(i).getAddress().size() > users.get(j + 1)
+        for (int i = 0; i < users.size() - 1; i++) {
+            for (int j = i + 1; j < users.size(); j++) {
+                if (i != j) {
+                    if (!Collections.disjoint(users.get(i).getAddress(),
+                            users.get(j).getAddress())) {
+                        sliyanie(users.get(i), users.get(j));
+                        if (users.get(i).getAddress().size() > users.get(j)
                                 .getAddress().size()) {
-                            users.remove(users.get(j + 1));
+                            users.remove(users.get(j));
                         } else {
                             users.remove(users.get(i));
                         }
-                        break;
                     }
                 }
             }
