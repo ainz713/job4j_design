@@ -8,6 +8,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class PochtaTest {
+    private List<Userp> st;
 
     @Test
     public void proverka() {
@@ -33,10 +34,10 @@ public class PochtaTest {
         gg.add(u3);
         gg.add(u4);
         gg.add(u5);
-        p.obrabotka(gg);
-        assertTrue(u1.getAddress().toString().contains("ups@pisem.net,"
+        st = p.obrabotka(gg);
+        assertTrue(st.get(1).getAddress().toString().contains("ups@pisem.net,"
                 + " lol@mail.ru, xxx@ya.ru, aaa@bbb.com, foo@gmail.com"));
-        assertTrue(u3.getAddress().toString().contains("vasya@pupkin.com, xyz@pisem.net"));
+        assertTrue(st.get(0).getAddress().toString().contains("vasya@pupkin.com, xyz@pisem.net"));
     }
 
     @Test
@@ -68,11 +69,11 @@ public class PochtaTest {
         gg.add(u3);
         gg.add(u4);
         gg.add(u5);
-        p.obrabotka(gg);
-        assertTrue(u1.getAddress().toString().contains("123123@pisem.net, ups@pisem.net,"
+        st = p.obrabotka(gg);
+        assertTrue(st.get(1).getAddress().toString().contains("123123@pisem.net, ups@pisem.net,"
                 + " 345s@pisem.net, lol@mail.ru, xxx@ya.ru,"
                 + " 1231@pisem.net, aaa@bbb.com, foo@gmail.com"));
-        assertTrue(u3.getAddress().toString().contains("xyz2423@pisem.net, vasya@pupkin.com,"
+        assertTrue(st.get(0).getAddress().toString().contains("xyz2423@pisem.net, vasya@pupkin.com,"
                 + " xyz@pisem.net, xyz111@pisem.net"));
     }
 }

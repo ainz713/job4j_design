@@ -1,33 +1,45 @@
 package ru.job4j;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Pochta {
 
     public List<Userp> obrabotka(List<Userp> users) {
+        Set<Userp> x = new HashSet<>();
+        List<Integer> m = new ArrayList<>();
+        Userp temp;
         for (int i = 0; i < users.size() - 1; i++) {
-            for (int j = i + 1; j < users.size(); j++) {
-                if (i != j) {
-                    if (!Collections.disjoint(users.get(i).getAddress(),
-                            users.get(j).getAddress())) {
-                        sliyanie(users.get(i), users.get(j));
-                        if (users.get(i).getAddress().size() > users.get(j)
-                                .getAddress().size()) {
-                            users.remove(users.get(j));
-                        } else {
-                            users.remove(users.get(i));
+            if (!m.contains(i)) {
+                temp = new Userp(users.get(i).getName());
+                for (String s
+                        : users.get(i).getAddress()) {
+                    temp.getAddress().add(s);
+                }
+                for (int j = i + 1; j < users.size(); j++) {
+                    if (i != j && !m.contains(j)) {
+                        if (!Collections.disjoint(temp.getAddress(),
+                                users.get(j).getAddress())) {
+                            sliyanie(temp, users.get(j));
+                            m.add(i);
+                            m.add(j);
+                            if (temp.getAddress().size() > users.get(j)
+                                    .getAddress().size()) {
+                                    x.add(temp);
+                            } else {
+                                x.add(users.get(j));
+                            }
                         }
                     }
                 }
             }
         }
-        return users;
+
+        return new ArrayList<>(x);
     }
 
     public void sliyanie(Userp username1, Userp username2) {
         for (String s
-                :username2.getAddress()) {
+                : username2.getAddress()) {
             username1.getAddress().add(s);
         }
     }
