@@ -59,7 +59,8 @@ public class ControllQualityTest  {
         assertThat(Warehouse.getWarehouse().get(0), is(fish));
         fish.setCreateDate(LocalDate.parse("2021-03-16"));
         fish.setExpiryDate(LocalDate.parse("2021-03-21"));
-        cq.resort(st);
+        List<Food> fs = cq.getAllProducts(st);
+        cq.resort(st, fs);
         assertThat(Trash.getTrash().get(0), is(fish));
     }
 }

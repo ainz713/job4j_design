@@ -24,16 +24,20 @@ public class ControllQuality {
         }
     }
 
-    public void resort(List<Storage> storages) {
+    public List<Food> getAllProducts(List<Storage> storages) {
         List<Food> foodst = new ArrayList<>();
         for (Storage e
                 : storages) {
             foodst.addAll(e.get());
             e.remove();
+        }
+        return foodst;
+    }
+
+    public void resort(List<Storage> storages, List<Food> foodst) {
             for (Food g
                     :foodst) {
             whatStorage(storages, g);
             }
         }
-    }
 }
