@@ -5,7 +5,7 @@ import java.util.*;
 public class Pochta {
 
     public List<Userp> obrabotka(List<Userp> users) {
-        Set<Userp> x = new HashSet<>();
+        Set<Userp> x = new LinkedHashSet<>();
         List<Integer> m = new ArrayList<>();
         Userp temp;
         for (int i = 0; i < users.size() - 1; i++) {

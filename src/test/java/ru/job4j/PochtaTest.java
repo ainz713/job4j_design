@@ -35,9 +35,9 @@ public class PochtaTest {
         gg.add(u4);
         gg.add(u5);
         st = p.obrabotka(gg);
-        assertTrue(st.get(1).getAddress().toString().contains("ups@pisem.net,"
+        assertTrue(st.get(0).getAddress().toString().contains("ups@pisem.net,"
                 + " lol@mail.ru, xxx@ya.ru, aaa@bbb.com, foo@gmail.com"));
-        assertTrue(st.get(0).getAddress().toString().contains("vasya@pupkin.com, xyz@pisem.net"));
+        assertTrue(st.get(1).getAddress().toString().contains("vasya@pupkin.com, xyz@pisem.net"));
     }
 
     @Test
@@ -70,10 +70,10 @@ public class PochtaTest {
         gg.add(u4);
         gg.add(u5);
         st = p.obrabotka(gg);
-        assertTrue(st.get(1).getAddress().toString().contains("123123@pisem.net, ups@pisem.net,"
+        assertTrue(st.get(0).getAddress().toString().contains("123123@pisem.net, ups@pisem.net,"
                 + " 345s@pisem.net, lol@mail.ru, xxx@ya.ru,"
                 + " 1231@pisem.net, aaa@bbb.com, foo@gmail.com"));
-        assertTrue(st.get(0).getAddress().toString().contains("xyz2423@pisem.net, vasya@pupkin.com,"
+        assertTrue(st.get(1).getAddress().toString().contains("xyz2423@pisem.net, vasya@pupkin.com,"
                 + " xyz@pisem.net, xyz111@pisem.net"));
     }
 }
