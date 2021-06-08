@@ -70,7 +70,7 @@ group by m.name;
 --Нужно получить все совещания, где не было ни одной заявки на посещения
 select m.name as Название_мероприятия
 from meetings m
-join guests g on m.id = g.meeting_id
-and g.status != 'Принял'
+left join guests g on m.id = g.meeting_id
+and g.status = 'Принял'
 group by m.name
-having count(g.id) > 1;
+having count(g.id) = 0;
